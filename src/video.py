@@ -4,6 +4,7 @@ from googleapiclient.discovery import build
 
 
 class Video:
+    """Класс для ютуб-видео"""
     api_key: str = os.getenv('API_KEY')
     youtube = build('youtube', 'v3', developerKey=api_key)
 

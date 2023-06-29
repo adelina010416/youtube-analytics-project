@@ -58,9 +58,11 @@ class Channel:
 
     @classmethod
     def get_service(cls):
+        """Возвращает объект для работы с API"""
         return build('youtube', 'v3', developerKey=cls.api_key)
 
     def to_json(self, file_name: str):
+        """Записывает статистику канала в .json файл."""
         try:
             extension = file_name.split('.')
             if extension[-1] != 'json':
